@@ -44,6 +44,37 @@ const mockProducts: Product[] = [
     category: 'cobertura',
     active: true,
     createdAt: new Date()
+  },
+  {
+    id: '5',
+    name: 'Suco de Laranja',
+    description: 'Suco natural de laranja',
+    sizes: [
+      { size: 'P', price: 4.00 },
+      { size: 'M', price: 6.00 },
+      { size: 'G', price: 8.00 }
+    ],
+    category: 'bebidas',
+    active: true,
+    createdAt: new Date()
+  },
+  {
+    id: '6',
+    name: 'Água Mineral',
+    description: 'Água mineral 500ml',
+    sizes: [{ size: 'P', price: 2.50 }],
+    category: 'bebidas',
+    active: true,
+    createdAt: new Date()
+  },
+  {
+    id: '7',
+    name: 'Guardanapo',
+    description: 'Guardanapo descartável',
+    sizes: [{ size: 'P', price: 0.50 }],
+    category: 'outros',
+    active: true,
+    createdAt: new Date()
   }
 ];
 

@@ -17,7 +17,7 @@ export interface Product {
     size: ProductSize;
     price: number;
   }[];
-  category: 'acai' | 'cobertura';
+  category: 'acai' | 'cobertura' | 'bebidas' | 'outros';
   active: boolean;
   createdAt: Date;
 }

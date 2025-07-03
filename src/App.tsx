@@ -7,6 +7,8 @@ import { Login } from "./components/Login";
 import { AdminLayout } from "./components/Layout/AdminLayout";
 import { PDVLayout } from "./components/PDV/PDVLayout";
 import { EstoqueLayout } from "./components/Estoque/EstoqueLayout";
+import { ProdutosLayout } from "./components/Produtos/ProdutosLayout";
+import { RelatoriosLayout } from "./components/Relatorios/RelatoriosLayout";
 
 const queryClient = new QueryClient();
 
@@ -24,11 +26,11 @@ function AppContent() {
     case 'pdv':
       return <PDVLayout />;
     case 'produtos':
-      return currentUser?.role === 'admin' ? <div>Produtos em construção...</div> : <PDVLayout />;
+      return currentUser?.role === 'admin' ? <ProdutosLayout /> : <PDVLayout />;
     case 'estoque':
       return currentUser?.role === 'admin' ? <EstoqueLayout /> : <PDVLayout />;
     case 'relatorios':
-      return currentUser?.role === 'admin' ? <div>Relatórios em construção...</div> : <PDVLayout />;
+      return currentUser?.role === 'admin' ? <RelatoriosLayout /> : <PDVLayout />;
     default:
       return currentUser?.role === 'admin' ? <AdminLayout /> : <PDVLayout />;
   }
